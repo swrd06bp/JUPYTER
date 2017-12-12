@@ -10,6 +10,6 @@ yes '' | openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout $JUPYTER_DI
 cp jupyter_notebook_config.py $JUPYTER_DIR/jupyter_notebook_config.py
 # change jupyter_dir
 sed -i -e "s/JUPYTER_DIR/$JUPYTER_DIR/g" $JUPYTER_DIR/jupyter_notebook_config.py
-sed -i -e "s/JUPYTER_DIR/$JUPYTER_DIR/g" run_jupyter.py
+sed -i -e "s/JUPYTER_DIR/$JUPYTER_DIR/g" run_jupyter.sh
 
 
